@@ -18,6 +18,10 @@ variable "resource_group_location" {
   type    = string
 }
 
+variable "resource_name_prefix" {
+  type    = string
+}
+
 variable "vnet_name" {
   type    = string
   
