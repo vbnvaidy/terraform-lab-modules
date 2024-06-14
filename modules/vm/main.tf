@@ -1,5 +1,5 @@
 resource "azurerm_network_interface" "myvmnic" {
-  name = "${local.resource_name_prefix}-nic-"
+  name = "${var.resource_name_prefix}-nic"
   location            = var.resource_group_location 
   resource_group_name = var.resource_group_name 
 
@@ -11,7 +11,7 @@ resource "azurerm_network_interface" "myvmnic" {
 }
 
 resource "azurerm_linux_virtual_machine" "mylinuxvm" {
-  name                = "${local.resource_name_prefix}-vm"
+  name                = "${var.resource_name_prefix}-vm"
   location            = var.resource_group_location 
   resource_group_name = var.resource_group_name
   size                = "Standard_F2"
